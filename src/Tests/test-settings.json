@@ -1,0 +1,108 @@
+{
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information"
+    }
+  },
+  "RabbitMqConfiguration": {
+    "CleanUpQueueSettings": {
+      "IsCleanUpEnabled": false,
+      "FromMessageCount": 200
+    },
+    "PollingSettings": {
+      "DefaultTimeoutRetries": 5,
+      "DefaultDelaysBetweenRetries": 1
+    },
+    "EnvironmentSettings": {
+      "HostName": "localhost",
+      "Env": "local"
+    },
+    "QueueSettings": [
+      {
+        "QueueSettingsName": "FirstDefaultExchangeQueue-Settings",
+        "Queue": "FirstDefaultExchangeQueue-${env}",
+        "ExchangeType": "",
+        "ExchangeName": "",
+        "RoutingKey": "FirstDefaultExchangeQueue-${env}",
+        "Durable": true,
+        "AutoDelete": false,
+        "AutoAck": false,
+        "Exclusive": false,
+        "Arguments": {},
+        "Bindings": []
+      },
+      {
+        "QueueSettingsName": "SecondDefaultExchangeQueue-Settings",
+        "Queue": "SecondDefaultExchangeQueue-${env}",
+        "ExchangeType": "",
+        "ExchangeName": "",
+        "RoutingKey": "SecondDefaultExchangeQueue-${env}",
+        "Durable": true,
+        "AutoDelete": false,
+        "AutoAck": false,
+        "Exclusive": false,
+        "Arguments": {},
+        "Bindings": []
+      },
+      {
+        "QueueSettingsName": "ThirdDefaultExchangeQueue-Settings",
+        "Queue": "ThirdDefaultExchangeQueue-${env}",
+        "ExchangeType": "",
+        "ExchangeName": "",
+        "RoutingKey": "ThirdDefaultExchangeQueue-${env}",
+        "Durable": true,
+        "AutoDelete": false,
+        "AutoAck": false,
+        "Exclusive": false,
+        "Arguments": {},
+        "Bindings": []
+      },
+      {
+        "QueueSettingsName": "FanoutExchangeQueue-Settings",
+        "Queue": "FanoutExchangeQueue-${env}",
+        "ExchangeType": "Fanout",
+        "ExchangeName": "FanoutExchange",
+        "RoutingKey": "",
+        "Durable": true,
+        "AutoDelete": false,
+        "AutoAck": false,
+        "Exclusive": false,
+        "Arguments": {},
+        "Bindings": []
+      },
+      {
+        "QueueSettingsName": "DirectExchangeQueue-Settings",
+        "Queue": "DirectExchangeQueue-${env}",
+        "ExchangeType": "Direct",
+        "ExchangeName": "DirectExchange",
+        "RoutingKey": "error",
+        "Durable": true,
+        "AutoDelete": false,
+        "AutoAck": false,
+        "Exclusive": false,
+        "Arguments": {},
+        "Bindings": [
+          {
+            "RoutingKey": "error"
+          },
+          {
+            "RoutingKey": "warning"
+          }
+        ]
+      },
+      {
+        "QueueSettingsName": "TopicExchangeQueue-Settings",
+        "Queue": "TopicExchangeQueue-${env}",
+        "ExchangeType": "Topic",
+        "ExchangeName": "TopicExchange",
+        "RoutingKey": "*.red.#",
+        "Durable": true,
+        "AutoDelete": false,
+        "AutoAck": false,
+        "Exclusive": false,
+        "Arguments": {},
+        "Bindings": []
+      }
+    ]
+  }
+}

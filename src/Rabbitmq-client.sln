@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GR8Tech.Sport.TestUtils.RabbitMQClient", "GR8Tech.Sport.TestUtils.RabbitMQClient\GR8Tech.Sport.TestUtils.RabbitMQClient.csproj", "{53065DE7-836E-4C05-B463-769C601EEDB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{2138048A-37D7-4923-9572-BC2980853B6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53065DE7-836E-4C05-B463-769C601EEDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53065DE7-836E-4C05-B463-769C601EEDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53065DE7-836E-4C05-B463-769C601EEDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53065DE7-836E-4C05-B463-769C601EEDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2138048A-37D7-4923-9572-BC2980853B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2138048A-37D7-4923-9572-BC2980853B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2138048A-37D7-4923-9572-BC2980853B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2138048A-37D7-4923-9572-BC2980853B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

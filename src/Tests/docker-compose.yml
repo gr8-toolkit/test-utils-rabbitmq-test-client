@@ -1,0 +1,14 @@
+﻿version: '3.5'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.11.8-management
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:5672" ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+      
